@@ -1,0 +1,20 @@
+extends layout
+
+block content
+
+  div(class="jumbotron img-rounded" style="width:580px;background-color:white;margin-top:20px;margin-left:auto;margin-right:auto")
+    div(class="container" style="width:550px;margin-left:-15px")
+      h1 Autenticación
+      hr
+      div(class="alert alert-info")
+        strong Ingrese su cuenta de administrador:
+      div(class="container" style="margin-left:60px")
+        form(class="form-signin" action="/login" method="post" style="max-width:360px;text-align:left")
+          div
+            label Username:
+            input(class="form-control" type="text" placeholder="Username" name="username")
+          div
+            label Password:
+            input(class="form-control" placeholder="Password" type="password" name="password")
+          hr
+          input(type="submit" class="btn btn-sm btn-primary" value="Log In")

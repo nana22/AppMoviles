@@ -1,0 +1,12 @@
+extends layout
+
+block content
+
+  div(class="jumbotron img-rounded" style="width:580px;background-color:white;margin-top:20px;margin-left:auto;margin-right:auto")
+    div(class="container" style="width:550px;margin-left:-15px")
+      h1 Autenticación
+      hr
+      div(class="alert alert-danger" style="font-size:13pt")
+        i El usuario o la contraseña no son correctos. 
+          a(href="/autenticar") Intenta
+          |  nuevamente.

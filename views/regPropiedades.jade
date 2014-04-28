@@ -1,0 +1,87 @@
+extends layout
+
+block content
+  div(class=style="opacity:0.9")
+    div(class="navbar navbar-inverse navbar-static-top" role="navigation")
+      div(class="container")
+        div(class="navbar-header")
+          img(src="images/logo.ico" alt="" style="width:40px")
+        div(class="navbar-collapse collapse")
+          ul(class="nav navbar-nav")
+            li
+              a(class="navbar-brand" href="/")
+                strong Home Finder
+            li
+              a(href="/")
+                span(class="glyphicon glyphicon-home") Inicio
+            li(class="active")
+              a(href="/regPropiedades")
+                span(class="glyphicon glyphicon-plus") Propiedades
+            li
+              a(href="/regPersonas")
+                span(class="glyphicon glyphicon-save") Personas
+            li
+              a(href="/logout")
+                span(class="glyphicon glyphicon-off") Log out
+
+  div(class="alert alert-info" style="width:600px;text-indent:20px;margin-left:auto;margin-right:auto;margin-top:auto;text-align:center")
+    h1
+      strong REGISTRAR PROPIEDADES
+  div(class="row")
+    div(class="col-sm-6 col-md-6")
+      div(class="jumbotron img-rounded" style="width:580px;background-color:white;margin-top:10px")
+        div(class="container" style="width:550px;margin-left:-15px")
+          div(class="alert alert-info" style="text-indent:20px")
+            strong Por favor, complete el siguiente formulario:
+          div(class="container" style="margin-left:60px")
+            form(class="form-signin" action="/addPropiedadWS" method="post" style="max-width:360px;text-align:left")
+              h4 Facebook del dueño:
+              input(class="form-control" type="text" placeholder="Facebook" name="fbDueño")
+              h4 Tipo de lugar:
+              input(class="form-control" type="text" placeholder="Tipo de lugar" name="tipo")
+              h4 Tipo de contrato:
+              input(class="form-control" type="text" placeholder="Tipo de contrato" name="contrato")
+              h4 Descripción general:
+              textarea(class="form-control" rows="2" placeholder="Descripción" name="general")
+              h4 Estructura del edificio:
+              textarea(class="form-control" rows="2" placeholder="Descripción" name="estructura")
+              h4 Amueblado:
+              textarea(class="form-control" rows="2" placeholder="Descripción" name="amueblado")
+              h4 Servicios:
+              textarea(class="form-control" rows="2" placeholder="Servicios" name="servicios")
+              h4 Precio:
+              input(class="form-control" type="text" placeholder="Precio" name="precio")
+              h4 Provincia:
+              input(class="form-control" type="text" placeholder="Provincia" name="provincia")
+              h4 Ciudad:
+              input(class="form-control" type="text" placeholder="Ciudad" name="ciudad")
+              h4 Dirección exacta:
+              input(class="form-control" type="text" placeholder="Señales 1" name="señal1")
+              h4 Otras señas:
+              input(class="form-control" type="text" placeholder="Señales 2" name="señal2")
+              h4 Coordenadas:
+              div(class="row")
+                div(class="col-xs-6")
+                  input(class="form-control" type="text" placeholder="Latitud" name="latitud")
+                div(class="col-xs-6")
+                  input(class="form-control" type="text" placeholder="Longitud" name="longitud")
+                br
+              div(class="row")
+                div(class="col-xs-6")
+                  button(type="submit" class="btn btn-primary") Registrar
+                div(class="col-xs-6")
+                  a(href="/" class="btn btn-danger") Volver
+
+    div(class="col-sm-6 col-md-6")
+      div(class="jumbotron img-rounded" style="width:610px;background-color:white;margin-top:10px")
+        h1(style="text-align:center") DUEÑOS
+        table(class="table table-condensed" style="width:580px;margin-left:-15px")
+          tr(style="font-size:25px;font-family:'cambria'")
+            td(style="background-color:transparent") Nombre
+            td(style="background-color:transparent") Apellido
+            td(style="background-color:transparent") Facebook
+          - each i in dueños
+            tr(style="font-size:16px;font-family:'cambria'")
+              td(style="background-color:transparent") #{i.nombre}
+              td(style="background-color:transparent") #{i.apellido1}
+              td(style="background-color:transparent") #{i.facebook}

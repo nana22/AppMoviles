@@ -1,0 +1,59 @@
+extends layout
+
+block content
+  div(class=style="opacity:0.9")
+    div(class="navbar navbar-inverse navbar-static-top" role="navigation")
+      div(class="container")
+        div(class="navbar-header")
+          img(src="images/logo.ico" alt="" style="width:40px")
+        div(class="navbar-collapse collapse")
+          ul(class="nav navbar-nav")
+            li
+              a(class="navbar-brand" href="/")
+                strong Home Finder
+            li(class="active")
+              a(href="/")
+                span(class="glyphicon glyphicon-home") Inicio
+            li
+              a(href="/regPropiedades")
+                span(class="glyphicon glyphicon-plus") Propiedades
+            li
+              a(href="/regPersonas")
+                span(class="glyphicon glyphicon-save") Personas
+            li
+              a(href="/logout")
+                span(class="glyphicon glyphicon-off") Log out
+
+  div(class="alert alert-info" style="width:600px;text-indent:20px;margin-left:auto;margin-right:auto;margin-top:auto;text-align:center")
+    h1
+      strong HOME FINDER
+  div(class="row")
+    div(class="col-sm-6 col-md-6")
+      div(class="jumbotron img-rounded" style="width:610px;background-color:white;margin-top:10px")
+        h1(style="text-align:center") Propiedades
+        table(class="table table-condensed" style="width:580px;margin-left:-15px")
+          tr(style="font-size:25px;font-family:'cambria'")
+            td(style="background-color:transparent") Tipo
+            td(style="background-color:transparent") Contrato
+            td(style="background-color:transparent") ciudad
+            td(style="background-color:transparent") Precio
+          - each i in props
+            tr(style="font-size:16px;font-family:'cambria'")
+              td(style="background-color:transparent") #{i.tipo}
+              td(style="background-color:transparent") #{i.contrato}
+              td(style="background-color:transparent") #{i.ciudad}
+              td(style="background-color:transparent") #{i.precio}
+
+    div(class="col-sm-6 col-md-6")
+      div(class="jumbotron img-rounded" style="width:610px;background-color:white;margin-top:10px")
+        h1(style="text-align:center") Dueños
+        table(class="table table-condensed" style="width:580px;margin-left:-15px")
+          tr(style="font-size:25px;font-family:'cambria'")
+            td(style="background-color:transparent") Nombre
+            td(style="background-color:transparent") Apellido
+            td(style="background-color:transparent") Facebook
+          - each i in dueños
+            tr(style="font-size:16px;font-family:'cambria'")
+              td(style="background-color:transparent") #{i.nombre}
+              td(style="background-color:transparent") #{i.apellido1}
+              td(style="background-color:transparent") #{i.facebook}
