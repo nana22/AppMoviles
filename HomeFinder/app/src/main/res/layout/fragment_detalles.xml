@@ -1,0 +1,27 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.contactlist.homefinder.app.Detalles"
+    android:background="@drawable/detallesbackground">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true" >
+
+        <TextView
+            android:background="@drawable/detallesbackground"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textSize="17dip"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:id="@+id/tvDato"
+            android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft" />
+
+    </ScrollView>
+
+</RelativeLayout>

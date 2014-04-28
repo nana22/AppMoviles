@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.contactlist.homefinder.app.Ver"
+    android:weightSum="1">
+
+    <fragment
+        android:layout_width="291dp"
+        android:layout_height="match_parent"
+        android:name="com.example.contactlist.homefinder.app.FragVer"
+        android:id="@+id/fragment"
+        tools:layout="@layout/fragment_frag__ver" />
+
+    <fragment
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:name="com.example.contactlist.homefinder.app.Detalles"
+        android:id="@+id/fragment2"
+        tools:layout="@layout/fragment_detalles" />
+</LinearLayout>
+
