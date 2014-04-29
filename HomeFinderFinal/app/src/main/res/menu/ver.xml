@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android" >
+    <!-- Search, should appear as action button -->
+    <item android:id="@+id/action_search"
+        android:icon="@android:drawable/ic_menu_search"
+        android:title="Search"
+        android:showAsAction="ifRoom">
+        <menu>
+            <item android:id="@+id/contrato"
+                android:title="Alquiler/Venta" />
+            <item android:id="@+id/tipo"
+                android:title="Tipo de lugar" />
+            <item android:id="@+id/provincia"
+                android:title="Provincia" />
+            <item android:id="@+id/precio"
+                android:title="Precio" />
+        </menu>
+    </item>
+    <!-- Settings, should always be in the overflow -->
+    <item android:id="@+id/action_settings"
+        android:title="@string/salir"
+        android:showAsAction="never" />
+</menu>
