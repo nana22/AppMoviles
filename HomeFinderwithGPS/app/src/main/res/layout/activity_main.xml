@@ -1,0 +1,51 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Home Finder"
+        android:textStyle="bold"
+        android:layout_marginTop="100dp"
+        android:shadowColor="@android:color/darker_gray"
+        android:layout_gravity="center"
+        android:textSize="20pt"
+        android:shadowRadius="2.0"
+        android:shadowDx="1"
+        android:shadowDy="2 " />
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:gravity="center" >
+
+        <ImageButton
+            android:background="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnRregistrar"
+            android:src="@drawable/registrar"
+            android:layout_gravity="center"
+            android:onClick="abrirRegistrar" />
+
+        <ImageButton
+            android:background="@android:color/transparent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btnVer"
+            android:onClick="abrirVer"
+            android:src="@drawable/ver"
+            android:layout_gravity="center"
+            android:layout_marginLeft="30dp" />
+
+    </LinearLayout>
+</LinearLayout>

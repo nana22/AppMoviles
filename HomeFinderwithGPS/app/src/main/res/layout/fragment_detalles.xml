@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.contactlist.homefinder.app.Detalles"
+    android:background="@drawable/detallesbackground">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/scrollView"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true" >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <TextView
+                android:background="@drawable/detallesbackground"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:textSize="15dip"
+                android:paddingTop="5dp"
+                android:id="@+id/tvDato"
+                android:paddingLeft="?android:attr/expandableListPreferredChildPaddingLeft" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/mapa"
+                android:layout_gravity="center"
+                android:layout_marginBottom="10dp"
+                android:background="@android:color/transparent"
+                android:id="@+id/btVerMapa"
+                android:textSize="10pt"
+                android:text="Ver en mapa"/>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
